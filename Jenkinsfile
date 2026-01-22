@@ -40,11 +40,11 @@ pipelime {
 
         stage('Send Email Notification'){
             steps{
-                emailext{
+                emailext(
                     subject: "Nestjs app deployed",
                     body: "Your Nestjs app is deloyed on http://13.51.204.190:${PORT}/",
                     to: "${EMAIL}"
-                }
+                )
             }
         }
     }
